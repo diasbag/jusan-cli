@@ -260,40 +260,31 @@ public class MyFile {
 			
 			if (splited[0].equals(ID_DIR)) {
 				isDirectory(splited[1]);
-			}
-			if (splited[0].equals(LS_COMMAND)) {
+			} else if (splited[0].equals(LS_COMMAND)) {
 				listDirectory(splited[1]);
-			}
-			if (splited[0].equals(LS_PY)) {
+			} else if (splited[0].equals(LS_PY)) {
 				listPythonFiles(splited[1]);
-			}
-			if (splited[0].equals(DEFINE)) {
+			}else if (splited[0].equals(DEFINE)) {
 				define(splited[1]);
-			}
-			if (splited[0].equals(READMOD)) {
+			}else if (splited[0].equals(READMOD)) {
 				printPermissions(splited[1]);
-			}
-			if (splited[0].equals(SETMOD)) {
+			}else if (splited[0].equals(SETMOD)) {
 				setPermissions(splited[1], splited[2]);
-			}
-			if (splited[0].equals(CAT)) {
+			}else if (splited[0].equals(CAT)) {
 				printContent(splited[1]);
-			}
-			if (splited[0].equals(APPEND)) {
+			}else if (splited[0].equals(APPEND)) {
 				appendFooter(splited[1]);
-			}
-			if (splited[0].equals(BACKUP)) {
+			}else if (splited[0].equals(BACKUP)) {
 				appendFooter(splited[1]);
-			}
-			if (splited[0].equals(LONG)) {
+			}else if (splited[0].equals(LONG)) {
 				printLongestWord(splited[1]);
-			}
-			if (splited[0].equals(HELP)) {
+			}else if (splited[0].equals(HELP)) {
 				help();
-			}
-			if (splited[0].equals(EXIT)) {
+			}else if (splited[0].equals(EXIT)) {
 				exit();
 				return;
+			} else {
+				System.out.println("Такой команды нет!");
 			}
 			System.out.print("> ");
 		}
