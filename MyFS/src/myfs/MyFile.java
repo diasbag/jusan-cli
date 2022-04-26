@@ -81,11 +81,11 @@ public class MyFile {
 		try {
 			File file = new File(path);
 			if(file.isDirectory()) {
-				System.out.print("Директория");
+				System.out.println("Директория");
 			}else if(file.isFile()) {
-				System.out.print("Файл");
+				System.out.println("Файл");
 			} else {
-				System.out.print("Не найдено!!!");
+				System.out.println("Не найдено!!!");
 			}
 		} catch (Exception e) {
 			System.out.println(e);
